@@ -19,7 +19,7 @@ class AZBot(commands.Bot):
         intents: discord.Intents,
         token: typing.AnyStr,
         *,
-        logger: logging.Logger = None
+        logger: logging.Logger = None,
     ) -> None:
         super().__init__(
             command_prefix=command_prefix,
@@ -59,4 +59,10 @@ class AZBot(commands.Bot):
     # Events
     async def on_ready(self) -> None:
         await self.wait_until_ready()
+        await self.change_presence(
+            activity=discord.Game(
+                name=f"{self.prefix}help | {len(self.guilds)} servers"
+            ),
+            status=discord.Status.idle,
+        )
         await bot_ready(self.logger, self)

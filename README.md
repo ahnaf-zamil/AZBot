@@ -1,3 +1,5 @@
+![AZBot Logo](https://i.imgur.com/t0RWKNK.png)
+
 # AZBot
 
 This bot is work in progress

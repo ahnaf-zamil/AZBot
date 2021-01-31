@@ -20,9 +20,16 @@ load_dotenv(verbose=True)
 intents = discord.Intents.default()
 intents.members = True
 
+# Instantiate bot
 bot = AZBot(
     command_prefix=os.getenv("PREFIX"), intents=intents, token=os.getenv("TOKEN")
 )
+
+# Loading cogs
+for i in os.listdir("./azbot/cogs"):
+    if i.endswith(".py"):  # if it's a python file
+        bot.load_extension(f"azbot.cogs.{i[:-3]}")
+
 
 # Run bot
 bot.run()

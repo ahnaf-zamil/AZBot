@@ -1,0 +1,9 @@
+[flake8]
+ignore = W605, E722
+max-line-length = 100
+max-complexity = 18
+select = B,C,E,F,W,T4,B9
+exclude =
+    venv/
+    __pycache__
+    azbot/__init__.py

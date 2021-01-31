@@ -1,1 +1,1 @@
-from .core.bot import AZBot
+from .internal.bot import AZBot

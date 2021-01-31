@@ -1,8 +1,8 @@
 from discord.ext import commands
 from datetime import datetime
 
-from azbot.core.ux import startup_banner, bot_ready
-from azbot.core.utils import Uptime
+from azbot.internal.ux import startup_banner, bot_ready
+from azbot.internal.utils import Uptime
 
 import typing
 import discord

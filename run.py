@@ -1,6 +1,5 @@
 from azbot import AZBot
 from dotenv import load_dotenv
-from discord.ext import commands
 
 import logging
 import os
@@ -24,12 +23,6 @@ intents.members = True
 bot = AZBot(
     command_prefix=os.getenv("PREFIX"), intents=intents, token=os.getenv("TOKEN")
 )
-
-
-@bot.command()
-async def test(ctx: commands.Context):
-    await ctx.reply(str(bot.uptime))
-
 
 # Run bot
 bot.run()
